@@ -15,9 +15,9 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"/>&nbsp;
 </div>
 
-## Ссылка на проект в GitHub Pages
+## Ссылка на макет Figma
 
-https://morevtrue.github.io/react-mesto-auth/
+https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1?type=design&node-id=1-9662&mode=design&t=99NLoJbp1To56VKg-0
 
 ## Развёртывание приложения
 
