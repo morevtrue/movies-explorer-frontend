@@ -5,8 +5,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: rgba(32, 32, 32, 1);
+  color: rgba(255, 255, 255, 1);
   font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
   min-width: 320px;
