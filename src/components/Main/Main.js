@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer';
 import imageMain from '../../images/logo-mainpage.svg'
 
 function Main(props) {
-  const [isOpenMainPage, setIsOpenMainPage] = React.useState(true);
+  // const [isOpenMainPage, setIsOpenMainPage] = React.useState(true);
   return (
     <>
       <Header loggedIn={props.loggedIn} isOpen={true}>
@@ -22,10 +22,12 @@ function Main(props) {
           <a href="#about-projects" className="header__button-know">Узнать больше</a>
         </div>
       </Header>
-      <AboutProjects id="about-projects" />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+      <main className="main">
+        <AboutProjects id="about-projects" />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </main>
       <Footer />
     </>
   )

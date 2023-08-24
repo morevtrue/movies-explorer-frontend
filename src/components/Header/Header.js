@@ -1,8 +1,8 @@
 import React from "react";
-import './Header.css';
-import logo from '../../images/logo.svg';
-import logoProfile from '../../images/logo-profile.svg';
 import { Link } from "react-router-dom";
+import './Header.css';
+import Navigation from "../Navigation/Navigation";
+import logo from '../../images/logo.svg';
 
 function Header(props) {
   return (
@@ -12,22 +12,8 @@ function Header(props) {
           <img src={logo} alt="логотип сайта" className="header__logo" />
         </Link>
         {
-          props.loggedIn ? <div className="header__menu">
-            <ul className="header__menu-links">
-              <li>
-                <Link to="/movies" className="header__menu-link">Фильмы</Link>
-              </li>
-              <li>
-                <a href="#" className="header__menu-link">Сохранённые фильмы</a>
-              </li>
-            </ul>
-            <div className="header__profile-content">
-              <a href="#" className="header__profile-button">Аккаунт</a>
-              <div className="header__profile-icon-background">
-                <img src={logoProfile} alt="логоттип профиля" className="header__logo-profile" />
-              </div>
-            </div>
-          </div>
+          props.loggedIn
+            ? <Navigation />
             : <div className="header__auth-links">
               <a href="#" className="header__register-link">Регистрация</a>
               <a href="#" className="header__login-link">Войти</a>

@@ -1,0 +1,19 @@
+.show-more {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0;
+  margin: 50px auto 80px;
+}
+
+.show-more__button {
+  width: 100%;
+  max-width: 1140px;
+  min-height: 36px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(47, 47, 47, 1);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: rgba(255, 255, 255, 1);
+}

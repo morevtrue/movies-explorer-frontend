@@ -48,7 +48,9 @@ function App() {
         <Route
           path="/saved-movies"
           element={
-            <SavedMovies />
+            <SavedMovies
+              loggedIn={isLoggedIn}
+            />
           }
         />
         <Route

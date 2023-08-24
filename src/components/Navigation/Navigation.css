@@ -1,0 +1,59 @@
+.navigation__menu {
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__menu-links {
+  display: flex;
+  gap: 20px;
+  max-width: 232px;
+  min-height: 18px;
+  list-style-type: none;
+  margin: 28px 0;
+  padding: 0;
+}
+
+.navigation__menu-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.navigation__profile-content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 13px;
+}
+
+.navigation__profile-button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 28px 0 30px;
+  padding: 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.navigation__profile-icon-background {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(49, 49, 49, 1);
+  border-radius: 6px;
+  padding: 0;
+  margin: 21px 0 23px;
+}
+
+.navigation__logo-profile {
+  width: 10.4px;
+  height: 10.7px;
+  margin: 9.75px 9.8px;
+  padding: 0;
+}
