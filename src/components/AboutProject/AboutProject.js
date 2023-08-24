@@ -1,9 +1,9 @@
 import React from "react";
 import './AboutProject.css';
 
-function AboutProjects() {
+function AboutProjects(props) {
   return (
-    <section className="about-projects">
+    <section className="about-projects" id={props.id}>
       <h2 className="about-projects__title">О проекте</h2>
       <div className="about-projects__overview">
         <ul className="about-projects__column">

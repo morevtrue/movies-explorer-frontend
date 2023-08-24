@@ -12,7 +12,7 @@ import Profile from "../Profile/Profile";
 
 function App() {
 
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
 
   return (
     <div className="app">
@@ -40,7 +40,9 @@ function App() {
         <Route
           path="/movies"
           element={
-            <Movies />
+            <Movies
+              loggedIn={isLoggedIn}
+            />
           }
         />
         <Route

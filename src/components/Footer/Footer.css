@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.footer__title {
+  width: 100%;
+  max-width: 320px;
+  margin: 79px auto 20px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.73px;
+  color: rgba(139, 139, 139, 1);
+}
+
+.footer__content {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(66, 66, 66, 1);
+  margin: 0;
+  padding: 0;
+}
+
+.footer__year {
+  padding: 0;
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.73px;
+}
+
+.footer__links {
+  display: flex;
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.73px;
+  color: rgba(255, 255, 255, 1);
+}

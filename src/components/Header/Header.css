@@ -6,7 +6,12 @@
   margin: 0 auto;
   padding: 0;
   flex-direction: column;
-  /* align-items: center; */
+}
+
+.header__link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 .header__type_page_main {
@@ -63,6 +68,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .header__profile-content {
@@ -79,6 +85,7 @@
   margin: 28px 0 30px;
   padding: 0;
   text-decoration: none;
+  color: rgba(255, 255, 255, 1);
 }
 
 .header__profile-icon-background {
@@ -161,15 +168,16 @@
 .header__button-know {
   background-color: rgba(7, 48, 66, 1);
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
   border: 1px solid rgba(255, 255, 255, .6);
   border-radius: 3px;
   width: 100%;
   max-width: 129px;
-  min-height: 36px;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
+  text-decoration: none;
+  text-align: center;
   color: rgba(255, 255, 255, 1);
 }
 
