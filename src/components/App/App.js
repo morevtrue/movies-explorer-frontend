@@ -9,6 +9,7 @@ import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Profile from "../Profile/Profile";
+import NotFoundError from "../NotFoundError/NotFoundError";
 
 function App() {
 
@@ -56,7 +57,9 @@ function App() {
         <Route
           path="/profile"
           element={
-            <Profile />
+            <Profile
+              loggedIn={isLoggedIn}
+            />
           }
         />
         <Route
@@ -67,7 +70,14 @@ function App() {
               : <Navigate to="/sign-in" replace />
           }
         />
+        <Route
+          path="/404"
+          element={
+            <NotFoundError />
+          }
+        />
       </Routes>
+
     </div>
   );
 }

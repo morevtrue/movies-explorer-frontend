@@ -27,7 +27,7 @@
 }
 
 .portfolio__list-item:last-child {
-  margin-bottom: 125px;
+  margin-bottom: 108px;
 }
 
 .portfolio__link {
@@ -47,6 +47,7 @@
   font-weight: 400;
   font-size: 30px;
   line-height: 50px;
+  letter-spacing: -1px;
 }
 
 .portfolio__list-image {

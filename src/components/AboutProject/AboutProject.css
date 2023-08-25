@@ -11,6 +11,7 @@
   font-size: 22px;
   line-height: 26.63px;
   margin: 110px 0 23px;
+  letter-spacing: -1px;
 }
 
 .about-projects__overview {
@@ -32,6 +33,7 @@
   line-height: 24.2px;
   width: 100%;
   max-width: 550px;
+  letter-spacing: -0.8px;
 }
 
 .about-projects__paragraph {
@@ -67,6 +69,7 @@
   margin: 0;
   padding: 9px 0;
   text-align: center;
+  letter-spacing: -1px;
 }
 
 .about-projects__duration-text-backend {
@@ -85,5 +88,5 @@
   background-color: rgba(32, 32, 32, 1);
   font-weight: 500;
   color: rgba(139, 139, 139, 1);
-  margin-bottom: 110px;
+  margin-bottom: 105px;
 }

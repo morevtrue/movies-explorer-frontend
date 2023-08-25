@@ -9,14 +9,14 @@ function Header(props) {
     <header className={`header ${props.isOpen ? `header__type_page_main` : ``}`}>
       <div className="header__content">
         <Link to="/" className="header__link">
-          <img src={logo} alt="логотип сайта" className="header__logo" />
+          <img src={logo} alt="на главную страницу" className="header__logo" />
         </Link>
         {
           props.loggedIn
-            ? <Navigation />
+            ? <Navigation isOpen={props.isOpen} />
             : <div className="header__auth-links">
-              <a href="#" className="header__register-link">Регистрация</a>
-              <a href="#" className="header__login-link">Войти</a>
+              <Link to="/sign-up" className="header__register-link">Регистрация</Link>
+              <Link to="/sign-in" className="header__login-link">Войти</Link>
             </div>
         }
       </div>
