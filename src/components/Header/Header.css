@@ -102,4 +102,8 @@
   .header__login-link {
     font-size: 10px;
   }
+
+  .header__content {
+    margin-bottom: 85px;
+  }
 }

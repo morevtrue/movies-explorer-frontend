@@ -95,3 +95,35 @@
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: 768px) {
+  .register__container {
+    margin-top: 232px;
+  }
+}
+
+@media (max-width: 491px) {
+  .register__container {
+    margin: 56px auto;
+    max-width: 260px;
+    align-items: center;
+  }
+
+  .register__title {
+    max-width: 260px;
+    margin: 50px auto 80px;
+    text-align: center;
+  }
+
+  .register__submit-button {
+    font-size: 12px;
+    line-height: 14.52px;
+    margin-top: 157px;
+  }
+
+  .register__title-login,
+  .register__place-login {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+}

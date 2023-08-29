@@ -177,5 +177,18 @@
 }
 
 @media (max-width: 491px) {
-  .header__logo {}
+  .navigation__menu-links {
+    margin-top: 146px;
+    gap: 23px;
+  }
+
+  .navigation__profile-button {
+    margin-bottom: 104px;
+  }
+
+  .navigation__menu-close-button_type_burger-menu {
+    width: 24px;
+    height: 24px;
+    margin: 18px;
+  }
 }

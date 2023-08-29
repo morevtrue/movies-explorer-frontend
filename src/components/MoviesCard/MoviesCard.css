@@ -88,3 +88,33 @@
     max-height: 190px;
   }
 }
+
+@media (max-width: 491px) {
+  .movies__card {
+    max-width: 300px;
+    min-height: 279px;
+  }
+
+  .movies__card-title {
+    font-size: 12px;
+    padding: 14px 0;
+  }
+
+  .movies__card-duration {
+    font-size: 10px;
+    padding: 14px 0;
+  }
+
+  .movies__card-image {
+    max-width: 300px;
+    min-height: 168px;
+  }
+
+  .movies__card-button-save {
+    margin-top: 14px;
+  }
+
+  .movies__card-content {
+    max-width: 272px;
+  }
+}

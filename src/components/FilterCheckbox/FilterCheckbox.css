@@ -1,5 +1,4 @@
 .filter {
-  padding-bottom: 42px;
   border-bottom: 1px solid rgba(170, 170, 170, .2);
   margin: 0 70px;
 }
@@ -25,6 +24,7 @@
   color: rgba(255, 255, 255, 1);
   margin: 25px 0 0;
   padding-left: 50px;
+  padding-bottom: 42px;
 }
 
 .filter__check-box-text::before {
@@ -63,5 +63,18 @@
 @media (max-width: 768px) {
   .filter {
     margin: 0 30px;
+  }
+}
+
+@media (max-width: 491px) {
+  .filter {
+    margin: 0 14px;
+  }
+
+  .filter__check-box-text {
+    padding-bottom: 63px;
+    margin-top: 30px;
+    font-size: 11px;
+    letter-spacing: -.5px;
   }
 }

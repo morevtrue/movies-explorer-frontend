@@ -32,3 +32,14 @@
     margin: 0 30px;
   }
 }
+
+@media (max-width: 491px) {
+  .show-more {
+    margin: 73px 0 85px;
+  }
+
+  .show-more__button {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+}

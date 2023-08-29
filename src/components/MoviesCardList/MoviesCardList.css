@@ -20,16 +20,14 @@
   .movies__card-list {
     margin: 79px 30px 0;
     max-width: 708px;
-  }
-
-  .movies__card-list {
-    column-gap: 24px;
     row-gap: 35px;
+    column-gap: 24px;
   }
 }
 
-/* @media (max-width: 479px) {
-  .movies-card-list {
-    max-width: 88.125vw;
+@media (max-width: 491px) {
+  .movies__card-list {
+    margin: 52px 10px 0;
+    row-gap: 7px;
   }
-} */
+}
