@@ -85,3 +85,13 @@
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: 768px) {
+  .profile__title {
+    margin: 161px 0 80px;
+  }
+
+  .profile__form-row:last-of-type {
+    margin-bottom: 192px;
+  }
+}

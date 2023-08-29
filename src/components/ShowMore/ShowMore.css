@@ -1,13 +1,16 @@
 .show-more {
-  width: 100%;
-  max-width: 1140px;
   padding: 0;
   margin: 60px auto 80px;
+  width: 100%;
+  max-width: 1280px;
 }
 
 .show-more__button {
-  width: 100%;
+  display: block;
+  width: calc(100% - 140px);
   max-width: 1140px;
+  margin: 0 70px;
+  padding: 0;
   min-height: 36px;
   border-radius: 6px;
   border: none;
@@ -16,4 +19,16 @@
   font-size: 12px;
   line-height: 14.52px;
   color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .show-more {
+    margin-top: 77px;
+  }
+
+  .show-more__button {
+    max-width: 708px;
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
 }

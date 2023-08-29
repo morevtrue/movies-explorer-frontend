@@ -8,7 +8,7 @@ function AboutMe() {
     <section className="about-me">
       <h2 className="about-me__title">Студент</h2>
       <ul className="about-me__overview">
-        <li>
+        <li className="about-me__overview-row">
           <img src={imageMe} alt="моя личная фотография" className="about-me__overview-image" />
         </li>
         <li>

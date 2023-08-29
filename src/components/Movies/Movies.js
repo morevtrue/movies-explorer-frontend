@@ -13,7 +13,7 @@ import imageThree from '../../images/grid-image-3.jpg';
 function Movies(props) {
   return (
     <>
-      <Header loggedIn={props.loggedIn} />
+      <Header loggedIn={props.loggedIn} isPageMovie={true} />
       <section className="movies">
         <SearchForm />
         <MoviesCardList>

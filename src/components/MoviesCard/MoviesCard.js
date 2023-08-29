@@ -13,21 +13,21 @@ function MoviesCard(props) {
   }
 
   return (
-    <li className="movies-card">
-      <ul className="movies-card__content">
+    <li className="movies__card">
+      <ul className="movies__card-content">
         <li>
-          <h2 className="movies-card__title">В погоне за Бенкси</h2>
+          <h2 className="movies__card-title">В погоне за Бенкси</h2>
         </li>
         <li>
-          <p className="movies-card__duration">0ч 42м</p>
+          <p className="movies__card-duration">0ч 42м</p>
         </li>
       </ul>
-      <img src={props.image} alt="обложка фильма" className="movies-card_image" />
+      <img src={props.image} alt="обложка фильма" className="movies__card-image" />
       <button className={
-        `movies-card__button-save 
-        ${isSaveMovie ? 'movies-card__button-save_type_active'
+        `movies__card-button-save 
+        ${isSaveMovie ? 'movies__card-button-save_type_active'
           : ''}
-        ${props.isSave ? 'movies-card__button-save_type_delete' : ''}`
+        ${props.isSave ? 'movies__card-button-save_type_delete' : ''}`
       } onClick={clickSaveButton}>{
           isSaveMovie || props.isSave ? '' : 'Сохранить'
         }</button>

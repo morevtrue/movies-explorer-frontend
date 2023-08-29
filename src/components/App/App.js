@@ -13,7 +13,7 @@ import NotFoundError from "../NotFoundError/NotFoundError";
 
 function App() {
 
-  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   return (
     <div className="app">

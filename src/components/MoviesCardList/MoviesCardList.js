@@ -3,9 +3,11 @@ import './MoviesCardList.css';
 
 function MoviesCardList(props) {
   return (
-    <ul className="movies-card-list">
-      {props.children}
-    </ul>
+    <section className="movies__cards">
+      <ul className="movies__card-list">
+        {props.children}
+      </ul>
+    </section>
   )
 }
 

@@ -12,15 +12,17 @@ function FilterCheckbox() {
   }
 
   return (
-    <label htmlFor="checkbox" className="filter-check-box">
-      <input
-        type="checkbox"
-        className="filter-check-box__input"
-        id="checkbox"
-        onClick={clickActiveCheckbox}
-      />
-      <span className={`filter-check-box__text ${isCheckedCheckbox ? 'filter-check-box__text_type_active' : ''}`}>Короткометражки</span>
-    </label>
+    <form className="filter">
+      <label htmlFor="checkbox" className="filter__check-box">
+        <input
+          type="checkbox"
+          className="filter__check-box-input"
+          id="checkbox"
+          onClick={clickActiveCheckbox}
+        />
+        <span className={`filter__check-box-text ${isCheckedCheckbox ? 'filter__check-box-text_type_active' : ''}`}>Короткометражки</span>
+      </label>
+    </form>
   )
 }
 
