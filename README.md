@@ -19,6 +19,10 @@
 
 https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1?type=design&node-id=1-9662&mode=design&t=99NLoJbp1To56VKg-0
 
+## Ссылка на демо сайта
+
+https://morevtrue.github.io/movies-explorer-frontend/
+
 ## Развёртывание приложения
 
 В терминале, в корневой директории, ввести команду `npm start`.
