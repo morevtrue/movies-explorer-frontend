@@ -50,6 +50,7 @@
 .promo__button-know:hover {
   border: 1px solid rgba(255, 255, 255, .4);
   color: rgba(255, 255, 255, .7);
+  cursor: pointer;
 }
 
 .promo__image {
