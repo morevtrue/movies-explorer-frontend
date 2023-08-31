@@ -44,6 +44,12 @@
   text-decoration: none;
   text-align: center;
   color: rgba(255, 255, 255, 1);
+  transition: border .5s linear, color .5s linear;
+}
+
+.promo__button-know:hover {
+  border: 1px solid rgba(255, 255, 255, .4);
+  color: rgba(255, 255, 255, .7);
 }
 
 .promo__image {

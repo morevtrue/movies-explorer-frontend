@@ -1,10 +1,13 @@
 import './Login.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useFormWithValidation } from '../../utils/useForm';
 
 import logo from '../../images/logo.svg';
 
 function Login() {
+  const { values, handleChange, errors, isValid } = useFormWithValidation();
+
   return (
     <section className="login">
       <div className="login__container">
@@ -16,22 +19,37 @@ function Login() {
           <label htmlFor="login-input-email" className="login__form-label">E-mail</label>
           <input
             type="email"
-            name="loginInputEmail"
+            name="email"
             className="login__form-input login__text login__text_input_email"
             id="login-input-email"
             placeholder="E-mail"
+            value={values.email || ""}
+            onChange={handleChange}
             required
           />
+          <span className="login__form-error" id="register-input-name-error">
+            {errors.email || ""}
+          </span>
           <label htmlFor="login-input-password" className="login__form-label">Пароль</label>
           <input
             type="password"
-            name="loginInputPassword"
+            name="password"
             className="login__form-input login__text login__text_input_password"
             id="login-input-password"
+            minLength="6"
             placeholder="Пароль"
+            value={values.password || ""}
+            onChange={handleChange}
             required
           />
-          <button type="submit" className="login__submit-button">
+          <span className="login__form-error" id="register-input-name-error">
+            {errors.password || ""}
+          </span>
+          <button
+            type="submit"
+            className={`login__submit-button ${!isValid ? 'login__submit-button_type_inactive' : ''}`}
+            disabled={!isValid}
+          >
             Войти
           </button>
         </form>

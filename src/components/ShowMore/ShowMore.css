@@ -19,6 +19,12 @@
   font-size: 12px;
   line-height: 14.52px;
   color: rgba(255, 255, 255, 1);
+  transition: color .5s linear;
+}
+
+.show-more__button:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, .7);
 }
 
 @media (max-width: 768px) {

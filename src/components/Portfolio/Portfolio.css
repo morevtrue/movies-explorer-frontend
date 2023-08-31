@@ -37,6 +37,13 @@
   padding: 0 0 19px;
   color: rgba(255, 255, 255, 1);
   margin: 0;
+  opacity: 1;
+  transition: border-bottom .5s linear, opacity .5s linear;
+}
+
+.portfolio__link:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, .7);
+  opacity: .7;
 }
 
 .portfolio__list-title {

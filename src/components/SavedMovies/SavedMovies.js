@@ -3,7 +3,6 @@ import './SavedMovies.css';
 import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
-import ShowMore from '../ShowMore/ShowMore';
 import Footer from '../Footer/Footer';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import imageOne from '../../images/grid-image-1.jpg';

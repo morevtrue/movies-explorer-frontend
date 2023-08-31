@@ -56,10 +56,13 @@
   font-size: 12px;
   line-height: 11px;
   color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  transition: background-color .7s linear, opacity .5s linear;
 }
 
 .movies__card-button-save:hover {
   cursor: pointer;
+  opacity: .8;
 }
 
 .movies__card-button-save_type_active {

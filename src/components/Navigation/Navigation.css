@@ -27,10 +27,16 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.navigation__menu-link:hover {
+  opacity: .7;
 }
 
 .navigation__menu-title {
@@ -54,6 +60,12 @@
   padding: 0;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.navigation__profile-button:hover {
+  opacity: .7;
 }
 
 .navigation__profile-logo {
@@ -82,6 +94,10 @@
   padding: 0;
 }
 
+.navigation__menu-link_type_active {
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .navigation_type_overlay {
     position: absolute;
@@ -93,10 +109,12 @@
   }
 
   .navigation__menu {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
     width: 0;
     height: 0;
     position: absolute;
+    transition: width .2s linear;
   }
 
   .navigation__menu-button {
@@ -110,31 +128,43 @@
     height: 44px;
     background: url(../../images/burger-menu-icon.svg) no-repeat center / cover;
     border: none;
+    opacity: 1;
+    transition: opacity .5s linear;
+    outline: none;
+  }
+
+  .navigation__menu-button:hover {
+    cursor: pointer;
+    opacity: .7;
   }
 
   .navigation__menu_type_burger-menu {
+    visibility: visible;
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
-    visibility: visible;
     height: 100vh;
     width: 100%;
     max-width: 520px;
     background-color: rgba(32, 32, 32, 1);
     z-index: 100;
-    gap: 0
+    gap: 0;
   }
 
   .navigation__menu-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     flex-grow: 2;
     margin: 159px auto 0;
     padding: 0;
     gap: 27px;
+  }
+
+  .navigation__menu-links_type_active {
+    display: flex;
   }
 
   .navigation__menu-link {
@@ -152,15 +182,19 @@
     align-self: center;
   }
 
-  .navigation__menu-link_type_underline {
+  .navigation__menu-link_type_active {
     display: inline-flex;
     border-bottom: 2px solid rgba(255, 255, 255, 1);
   }
 
   .navigation__profile-button {
-    display: flex;
+    display: none;
     margin: 0 auto 92px;
     flex-shrink: 0;
+  }
+
+  .navigation__profile-button_type_active {
+    display: flex;
   }
 
   .navigation__menu-close-button_type_burger-menu {
@@ -173,6 +207,13 @@
     background: url(../../images/close-menu-button.png) no-repeat center / cover;
     margin: 22px;
     border: none;
+    opacity: 1;
+    transition: opacity .5s linear;
+  }
+
+  .navigation__menu-close-button_type_burger-menu:hover {
+    cursor: pointer;
+    opacity: .7;
   }
 }
 
