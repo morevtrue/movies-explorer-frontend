@@ -41,6 +41,12 @@
   color: rgba(66, 133, 244, .7);
 }
 
+@media (max-width: 991px) {
+  .not-found-error__title {
+    margin-top: 408px;
+  }
+}
+
 @media (max-width: 491px) {
   .not-found-error__title {
     font-size: 80px;

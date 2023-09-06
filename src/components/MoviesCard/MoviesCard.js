@@ -11,17 +11,12 @@ function MoviesCard(props) {
       setIsSaveMovie(true);
     }
   }
-
   return (
     <li className="movies__card">
-      <ul className="movies__card-content">
-        <li>
-          <h2 className="movies__card-title">В погоне за Бенкси</h2>
-        </li>
-        <li>
-          <p className="movies__card-duration">0ч 42м</p>
-        </li>
-      </ul>
+      <div className="movies__card-content">
+        <h2 className="movies__card-title">В погоне за Бенкси</h2>
+        <p className="movies__card-duration">0ч 42м</p>
+      </div>
       <img src={props.image} alt="обложка фильма" className="movies__card-image" />
       <button className={
         `movies__card-button-save 

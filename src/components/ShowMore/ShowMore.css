@@ -1,6 +1,6 @@
 .show-more {
   padding: 0;
-  margin: 60px auto 80px;
+  margin: 60px auto 84px;
   width: 100%;
   max-width: 1280px;
 }
@@ -27,9 +27,10 @@
   color: rgba(255, 255, 255, .7);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .show-more {
-    margin-top: 77px;
+    margin-top: 82px;
+    margin-bottom: 76px;
   }
 
   .show-more__button {

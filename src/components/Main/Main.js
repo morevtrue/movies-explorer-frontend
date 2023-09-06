@@ -13,10 +13,13 @@ function Main(props) {
   // const [isOpenMainPage, setIsOpenMainPage] = React.useState(true);
   return (
     <>
-      <Header loggedIn={props.loggedIn} isOpen={true} isPageMain={true}>
-        <Promo />
-      </Header>
+      <Header
+        loggedIn={props.loggedIn}
+        isOpen={true}
+        isPageMain={true}
+      />
       <main className="main">
+        <Promo />
         <AboutProject id="about-projects" />
         <Techs />
         <AboutMe />

@@ -14,7 +14,7 @@ function Movies(props) {
   return (
     <>
       <Header loggedIn={props.loggedIn} isPageMovie={true} />
-      <section className="movies">
+      <main className="movies">
         <SearchForm />
         <MoviesCardList>
           <MoviesCard image={imageOne} />
@@ -31,7 +31,7 @@ function Movies(props) {
           <MoviesCard image={imageThree} />
         </MoviesCardList>
         <ShowMore />
-      </section>
+      </main>
       <Footer />
     </>
   )

@@ -22,7 +22,6 @@
 }
 
 .about-project__column {
-  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -46,76 +45,57 @@
   max-width: 550px;
 }
 
-.about-project__duration-row-one,
-.about-project__duration-row-two {
+.about-project__duration-columns {
   display: flex;
-  list-style-type: none;
+  width: calc(100% - 140px);
+  max-width: 1140px;
+  margin: 0 70px 105px;
+}
+
+.about-project__duration-column {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
   margin: 0;
   padding: 0;
-  width: 100%;
-  max-width: 1280px;
-  font-size: 14px;
 }
 
-.about-project__duration-row-one {
-  font-weight: 400;
-  line-height: 16.94px;
-}
-
-.about-project__duration-row-two {
-  font-weight: 500;
-  line-height: 17px;
-}
-
-.about-project__column-one {
+.about-project__duration-column_type_backend {
   width: 20%;
-  margin-left: 70px;
 }
 
-.about-project__column-two {
+.about-project__duration-column_type_frontend {
   width: 80%;
-  margin-right: 70px;
 }
 
-.about-project__duration-text-backend,
-.about-project__duration-text-frontend {
-  width: 100%;
-  min-height: 18px;
+.about-project__duration-week {
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
   margin: 0;
   padding: 9px 0;
-  text-align: center;
-  letter-spacing: -1px;
-}
-
-.about-project__duration-text-backend {
-  max-width: 228px;
-  background-color: rgba(61, 220, 132, 1);
-  color: rgba(0, 0, 0, 1);
-}
-
-.about-project__duration-text-frontend {
-  max-width: 912px;
   background-color: rgba(48, 48, 48, 1);
-  color: rgba(255, 255, 255, 1);
 }
 
-.about-project__duration-text-backend_type_row-two {
-  background-color: rgba(32, 32, 32, 1);
+.about-project__duration-week_theme_green {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(61, 220, 132, 1);
+}
+
+.about-project__duration-text {
   font-weight: 500;
   color: rgba(139, 139, 139, 1);
-  margin-bottom: 105px;
+  text-align: center;
+  margin: 0;
+  padding: 14px 0 7px;
 }
 
-@media (max-width: 911px) {
-  .about-project__subtitle {
-    max-width: 340px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .about-project__overview {
     gap: 30px;
     margin: 0 50px;
+    justify-content: space-between;
   }
 
   .about-project__subtitle,
@@ -134,23 +114,20 @@
   .about-project__paragraph {
     font-size: 12px;
     line-height: 18px;
-    margin-bottom: 93px;
+    margin-bottom: 92px;
   }
 
-  .about-project__column-one {
-    margin-left: 50px;
+  .about-project__duration-columns {
+    width: calc(100% - 100px);
+    margin: 0 50px 90px;
   }
 
-  .about-project__column-two {
-    margin-right: 50px;
+  .about-project__duration-column_type_backend {
+    width: 21%;
   }
 
-  .about-project__duration-row-two {
-    font-weight: 400;
-  }
-
-  .about-project__duration-text-backend_type_row-two {
-    margin-bottom: 90px;
+  .about-project__duration-column_type_frontend {
+    width: 79%;
   }
 }
 
@@ -168,54 +145,58 @@
     gap: 0;
   }
 
+  .about-project__column {
+    margin-top: 60px;
+  }
+
+  .about-project__column:last-of-type {
+    margin-top: 0;
+  }
+
   .about-project__subtitle,
   .about-project__paragraph {
     max-width: 284px;
   }
 
   .about-project__subtitle {
-    margin: 60px 0 16px;
+    margin: 0 0 16px;
     font-size: 18px;
     line-height: 21.78px;
   }
 
-  .about-project__subtitle_type_row-two {
-    margin-top: 0;
-  }
-
   .about-project__paragraph {
-    margin: 0 0 56px;
+    margin: 0 0 59px;
     font-size: 11px;
     line-height: 16px;
   }
 
-  .about-project__duration-row-one {
-    margin-top: 4px;
+  .about-project__duration-columns {
+    width: calc(100% - 36px);
+    margin: 0 18px 69px;
   }
 
-  .about-project__duration-row-one,
-  .about-project__duration-row-two {
+  .about-project__duration-column {
     font-size: 11px;
     line-height: 13.31px;
   }
 
-  .about-project__duration-text-backend,
-  .about-project__duration-text-frontend {
-    min-height: 13px;
+  .about-project__duration-column_type_backend {
+    width: 35.3%;
+  }
+
+  .about-project__duration-column_type_frontend {
+    width: 64.7%;
+  }
+
+  .about-project__duration-text {
+    font-weight: 400;
+  }
+
+  .about-project__duration-week {
     padding: 11px 0;
   }
 
-  .about-project__column-one {
-    margin-left: 18px;
-    width: 35%;
-  }
-
-  .about-project__column-two {
-    margin-right: 18px;
-    width: 65%;
-  }
-
-  .about-project__duration-text-backend_type_row-two {
-    margin-bottom: 69px;
+  .about-project__duration-text {
+    padding: 10px 0;
   }
 }

@@ -2,8 +2,7 @@ import React from "react";
 import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 
-import Register from '../Register/Register';
-import Login from "../Login/Login";
+import Auth from "../Authorization/Auth";
 // import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
@@ -21,13 +20,27 @@ function App() {
         <Route
           path="/sign-up"
           element={
-            <Register />
+            <Auth
+              isLogin={false}
+              buttonText="Зарегистрироваться"
+              text="Уже зарегистрированы?"
+              linkText="Войти"
+              title="Добро пожаловать!"
+              link="/sign-in"
+            />
           }
         />
         <Route
           path="/sign-in"
           element={
-            <Login />
+            <Auth
+              isLogin={true}
+              buttonText="Войти"
+              text="Ещё не зарегистрированы?"
+              linkText="Регистрация"
+              title="Рады видеть!"
+              link="/sign-up"
+            />
           }
         />
         <Route

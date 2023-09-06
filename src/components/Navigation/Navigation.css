@@ -80,7 +80,7 @@
   margin: 8px 0 0;
 }
 
-.navigation__profile-logo_theme-mainpage {
+.navigation__profile-logo_theme_mainpage {
   background-color: rgba(15, 65, 87, 1);
 }
 
@@ -98,9 +98,20 @@
   font-weight: 500;
 }
 
+@media (max-width: 991px) {
+  .navigation__profile-button {
+    margin-right: 50px;
+  }
+}
+
 @media (max-width: 768px) {
-  .navigation_type_overlay {
+  .navigation {
+    visibility: hidden;
     position: absolute;
+  }
+
+  .navigation_type_overlay {
+    visibility: visible;
     width: 100%;
     max-width: 768px;
     height: 100vh;
@@ -109,7 +120,6 @@
   }
 
   .navigation__menu {
-    /* display: none; */
     visibility: hidden;
     width: 0;
     height: 0;
@@ -118,11 +128,8 @@
   }
 
   .navigation__menu-button {
-    position: absolute;
-    top: 0;
-    right: 15px;
     display: block;
-    margin: 15px 0;
+    margin: 15px 30px 15px 0;
     padding: 0;
     width: 44px;
     height: 44px;
@@ -138,7 +145,7 @@
     opacity: .7;
   }
 
-  .navigation__menu_type_burger-menu {
+  .navigation__menu_type_active {
     visibility: visible;
     display: flex;
     flex-direction: column;
@@ -158,7 +165,7 @@
     flex-direction: column;
     justify-content: flex-start;
     flex-grow: 2;
-    margin: 159px auto 0;
+    margin: 87px auto 0;
     padding: 0;
     gap: 27px;
   }
@@ -189,7 +196,7 @@
 
   .navigation__profile-button {
     display: none;
-    margin: 0 auto 92px;
+    margin: 0 auto 86px;
     flex-shrink: 0;
   }
 
@@ -197,11 +204,9 @@
     display: flex;
   }
 
-  .navigation__menu-close-button_type_burger-menu {
+  .navigation__menu-close-button_type_active {
     visibility: visible;
-    position: absolute;
-    top: 0;
-    right: 0;
+    align-self: flex-end;
     width: 30px;
     height: 30px;
     background: url(../../images/close-menu-button.png) no-repeat center / cover;
@@ -211,7 +216,7 @@
     transition: opacity .5s linear;
   }
 
-  .navigation__menu-close-button_type_burger-menu:hover {
+  .navigation__menu-close-button_type_active:hover {
     cursor: pointer;
     opacity: .7;
   }
@@ -219,15 +224,20 @@
 
 @media (max-width: 491px) {
   .navigation__menu-links {
-    margin-top: 146px;
     gap: 23px;
   }
 
   .navigation__profile-button {
-    margin-bottom: 104px;
+    margin-bottom: 42px;
   }
 
-  .navigation__menu-close-button_type_burger-menu {
+  .navigation__menu-button {
+    width: 22px;
+    height: 40px;
+    margin: 17px 23px 17px 0;
+  }
+
+  .navigation__menu-close-button_type_active {
     width: 24px;
     height: 24px;
     margin: 18px;

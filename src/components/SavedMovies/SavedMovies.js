@@ -13,14 +13,14 @@ function SavedMovies(props) {
   return (
     <>
       <Header loggedIn={props.loggedIn} isPageSave={true} />
-      <section className="saved-movies">
+      <main className="saved-movies">
         <SearchForm />
         <MoviesCardList>
           <MoviesCard image={imageOne} isSave={true} />
           <MoviesCard image={imageTwo} isSave={true} />
           <MoviesCard image={imageThree} isSave={true} />
         </MoviesCardList>
-      </section>
+      </main>
       <Footer />
     </>
   )

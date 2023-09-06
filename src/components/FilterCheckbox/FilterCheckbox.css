@@ -68,9 +68,13 @@
   transition: left .3s linear;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .filter {
     margin: 0 30px;
+  }
+
+  .filter__check-box-text {
+    padding-bottom: 54px;
   }
 }
 
@@ -83,6 +87,5 @@
     padding-bottom: 63px;
     margin-top: 30px;
     font-size: 11px;
-    letter-spacing: -.5px;
   }
 }

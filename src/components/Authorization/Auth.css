@@ -1,20 +1,31 @@
-.register__container {
+.auth {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 396px;
-  margin: 70px auto;
-  padding: 0;
 }
 
-.register__link-main {
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 396px;
+  min-height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.auth__form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__link-main {
   width: 38px;
   height: 38px;
 }
 
-.register__title {
+.auth__title {
   padding: 0;
+  margin: 0;
   margin: 40px 0;
   font-weight: 500;
   font-size: 24px;
@@ -24,14 +35,7 @@
   max-width: 396px;
 }
 
-.register__form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 396px;
-}
-
-.register__form-label {
+.auth__form-label {
   font-weight: 400;
   font-size: 10px;
   line-height: 12.1px;
@@ -40,7 +44,12 @@
   padding: 0;
 }
 
-.register__form-input {
+.auth__form-label_type_inactive {
+  visibility: hidden;
+  order: 1;
+}
+
+.auth__form-input {
   font-weight: 400;
   font-size: 14px;
   line-height: 16.94px;
@@ -54,34 +63,50 @@
   transition: border-bottom .5s linear;
 }
 
-.register__form-input:hover {
+.auth__form-input_type_inactive {
+  visibility: hidden;
+  order: 1;
+}
+
+.auth__form-input:hover {
   border-bottom: 1px solid rgba(66, 133, 244, 1);
 }
 
-.register__form-input:focus {
+.auth__form-input:focus {
   border-bottom: 1px solid rgba(66, 133, 244, 1);
 }
 
-.register__form-input_type_error {
+.auth__form-input_type_error {
   color: rgba(238, 52, 101, 1);
 }
 
-.register__form-error {
+.auth__form-error {
   font-size: 10px;
   line-height: 12.1px;
   margin: 0 0 6px;
   color: rgba(238, 52, 101, 1);
   min-height: 24px;
   width: 100%;
-  /* white-space: nowrap; */
 }
 
-.register__form-error:last-of-type {
+.auth__form-error:last-of-type {
   margin-bottom: 65px;
 }
 
-.register__submit-button {
-  margin: 35px 0 16px;
+.auth__form-error_type_inactive {
+  visibility: hidden;
+  order: 1;
+}
+
+.auth__content-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.auth__submit-button {
+  margin: 32px 0 16px;
   padding: 0;
   border: none;
   font-weight: 500;
@@ -96,29 +121,29 @@
   transition: opacity .5s linear, background-color .5s linear;
 }
 
-.register__submit-button:hover {
+.auth__submit-button:hover {
   opacity: .8;
   cursor: pointer;
 }
 
-.register__submit-button_type_inactive {
+.auth__submit-button_type_inactive {
   background-color: rgba(248, 248, 248, 1);
   color: rgba(194, 194, 194, 1);
   transition: background-color .5s linear;
 }
 
-.register__submit-button_type_inactive:hover {
+.auth__submit-button_type_inactive:hover {
   cursor: default;
   opacity: 1;
 }
 
-.register__place-login {
+.auth__place-login {
   display: flex;
   margin: 0 auto;
   gap: 6px;
 }
 
-.register__title-login {
+.auth__title-login {
   color: rgba(139, 139, 139, 1);
   font-weight: 400;
   font-size: 14px;
@@ -127,49 +152,55 @@
   padding: 0;
 }
 
-.register__link-login {
+.auth__link-login {
   text-decoration: none;
   color: rgba(66, 133, 244, 1);
   font-weight: 400;
   font-size: 14px;
   line-height: 16.94px;
-  margin: 0;
+  /* margin: 0 0 10vh; */
   padding: 0;
   transition: color .5s linear;
 }
 
-.register__link-login:hover {
+.auth__link-login:hover {
   color: rgba(66, 133, 244, .7);
 }
 
-@media (max-width: 768px) {
-  .register__container {
-    margin-top: 232px;
-  }
-}
-
 @media (max-width: 491px) {
-  .register__container {
-    margin: 56px auto;
+  .auth__form {
     max-width: 260px;
-    align-items: center;
   }
 
-  .register__title {
+  .auth__form-content {
+    flex: 1;
+  }
+
+  .auth__form-error:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .auth__link-main {
+    margin-top: 56px;
+    align-self: center;
+  }
+
+  .auth__title {
     max-width: 260px;
     margin: 50px auto 80px;
     text-align: center;
   }
 
-  .register__submit-button {
+  .auth__submit-button {
     font-size: 12px;
     line-height: 14.52px;
-    margin-top: 123px;
+    margin-top: 0;
   }
 
-  .register__title-login,
-  .register__link-login {
+  .auth__title-login,
+  .auth__link-login {
     font-size: 12px;
     line-height: 14.52px;
+    margin-bottom: 3.85vh;
   }
 }
