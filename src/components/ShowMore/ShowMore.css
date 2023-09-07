@@ -36,13 +36,19 @@
   .show-more__button {
     max-width: 708px;
     width: calc(100% - 60px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .show-more__button {
     margin: 0 30px;
   }
 }
 
 @media (max-width: 491px) {
   .show-more {
-    margin: 73px 0 85px;
+    margin: 0 0 87px;
   }
 
   .show-more__button {

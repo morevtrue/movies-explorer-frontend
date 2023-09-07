@@ -28,7 +28,7 @@ function Auth(props) {
           <input
             type="text"
             name="name"
-            className={`auth__form-input auth__text auth__text_input_name ${props.isLogin ? 'auth__form-input_type_inactive' : ''}`}
+            className={`auth__form-input ${props.isLogin ? 'auth__form-input_type_inactive' : ''}`}
             id="auth-input-name"
             placeholder="Имя"
             minLength="2"
@@ -44,7 +44,7 @@ function Auth(props) {
           <input
             type="email"
             name="email"
-            className="auth__form-input auth__text auth__text_input_email"
+            className="auth__form-input"
             id="auth-input-email"
             placeholder="E-mail"
             value={values.email || ""}
@@ -58,7 +58,7 @@ function Auth(props) {
           <input
             type="password"
             name="password"
-            className={`auth__form-input auth__text auth__text_input_password ${errors.password ? 'auth__form-input_type_error' : ''}`}
+            className={`auth__form-input ${errors.password ? 'auth__form-input_type_error' : ''}`}
             id="auth-input-password"
             placeholder="Пароль"
             minLength="6"

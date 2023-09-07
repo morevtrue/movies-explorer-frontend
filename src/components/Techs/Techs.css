@@ -103,6 +103,21 @@
   }
 }
 
+@media (max-width: 700px) {
+  .techs__types {
+    flex-wrap: wrap;
+    max-width: 178px;
+    margin-bottom: 75px;
+    justify-content: start;
+  }
+
+  .techs__name {
+    font-size: 12px;
+    line-height: 14.52px;
+    width: 84px;
+  }
+}
+
 @media (max-width: 491px) {
   .techs {
     background-color: rgba(32, 32, 32, 1);
@@ -129,18 +144,5 @@
     line-height: 16px;
     max-width: 289px;
     letter-spacing: -.5px;
-  }
-
-  .techs__types {
-    flex-wrap: wrap;
-    max-width: 178px;
-    margin-bottom: 75px;
-    justify-content: start;
-  }
-
-  .techs__name {
-    font-size: 12px;
-    line-height: 14.52px;
-    width: 84px;
   }
 }

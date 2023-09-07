@@ -86,7 +86,7 @@
   .promo__container::before {
     display: flex;
     position: static;
-    margin: 93px auto 48px;
+    margin: 107px auto 48px;
   }
 
   .promo__title {
@@ -114,10 +114,9 @@
 
 @media (max-width: 491px) {
   .promo__container::before {
-    margin-top: 0;
+    margin: 15px auto 45px;
     max-width: 210px;
     min-height: 206px;
-    margin-bottom: 45px;
   }
 
   .promo__title {

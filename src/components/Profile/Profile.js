@@ -33,6 +33,7 @@ function Profile(props) {
   function handleSubmitForm(evt) {
     evt.preventDefault();
     setTitleForm(valueName);
+    // setIsDisabled(false);
   }
 
   function signOut() {
@@ -58,7 +59,7 @@ function Profile(props) {
                 minLength="2"
                 maxLength="32"
                 placeholder="Ваше имя..."
-                readOnly={!isDisabled}
+                disabled={!isDisabled}
                 required
               />
             </li>
@@ -72,7 +73,7 @@ function Profile(props) {
                 value={valueEmail}
                 onChange={handleChangeEmail}
                 placeholder="Ваш e-mail..."
-                readOnly={!isDisabled}
+                disabled={!isDisabled}
                 required
               />
             </li>
