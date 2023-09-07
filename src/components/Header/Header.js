@@ -9,7 +9,7 @@ function Header(props) {
     <header className={`header ${props.isOpen ? `header_theme_main` : ``}`}>
       <div className="header__content">
         <Link to="/" className="header__link">
-          <img src={logo} alt="на главную страницу" className="header__logo" />
+          <img src={logo} alt="на главную страницу" className="logo" />
         </Link>
         {
           props.loggedIn

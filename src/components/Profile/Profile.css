@@ -30,6 +30,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  flex: 1;
 }
 
 .profile__form-row {
@@ -64,6 +65,17 @@
   border: none;
   background-color: rgba(32, 32, 32, 1);
   outline: none;
+  border-radius: 3px;
+  transition: background-color .5s linear, outline .5s linear, color .5s linear;
+}
+
+.profile__form-input_type_active:focus {
+  background-color: rgba(80, 80, 80, 1);
+  outline: 1px solid rgba(170, 170, 170, 1);
+}
+
+.profile__form-input_type_active:hover {
+  color: rgba(255, 255, 255, .6);
 }
 
 .profile__form-buttons {
@@ -107,6 +119,8 @@
   color: rgba(238, 52, 101, 1);
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  text-align: center;
   transition: color .5s linear;
 }
 
@@ -128,10 +142,42 @@
   border: none;
   background-color: rgba(52, 86, 243, 1);
   color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  transition: opacity .5s linear, background-color .5s linear;
 }
 
 .profile__submit-button_type_active {
   display: none;
+}
+
+.profile__submit-button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.profile__submit-button_type_error {
+  background-color: rgba(248, 248, 248, 1);
+  color: rgba(194, 194, 194, 1);
+  transition: background-color .5s linear;
+}
+
+.profile__submit-button_type_error:hover {
+  cursor: default;
+  opacity: 1;
+}
+
+.profile__error-text {
+  display: none;
+  margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.31px;
+  color: rgba(255, 0, 76, 1);
+  text-align: center;
+}
+
+.profile__error-text_type_active {
+  display: inline;
 }
 
 @media (max-width: 991px) {
@@ -139,8 +185,18 @@
     justify-content: center;
   }
 
+  .profile__form-rows {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
   .profile__form-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     margin: 0 0 83px;
+    flex: 1;
   }
 
   .profile__form-buttons {
@@ -162,19 +218,11 @@
   .profile__form-title {
     margin: 0 0 63px;
     max-width: 260px;
-  }
-
-  .profile__form-rows {
-    display: flex;
-    flex-direction: column;
+    flex: 0;
   }
 
   .profile__form-buttons {
     margin-bottom: 40px;
     max-width: 260px;
-  }
-
-  .profile__submit-button {
-    /* max-width: 260px; */
   }
 }

@@ -25,10 +25,13 @@
   margin: 25px 0 0;
   padding-left: 50px;
   padding-bottom: 42px;
+  opacity: 1;
+  transition: opacity .5s linear;
 }
 
 .filter__check-box-text:hover {
   cursor: pointer;
+  opacity: .7;
 }
 
 .filter__check-box-text::before {

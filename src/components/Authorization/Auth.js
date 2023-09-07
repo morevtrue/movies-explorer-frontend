@@ -17,9 +17,10 @@ function Auth(props) {
       <form
         className="auth__form"
         name="authForm"
+        onSubmit={props.onSubmit}
       >
         <Link to="/" className="auth__link-main">
-          <img src={logo} alt="на главную страницу" className="auth__image" />
+          <img src={logo} alt="на главную страницу" className="logo logo_type_auth" />
         </Link>
         <h1 className="auth__title">{props.title}</h1>
         <div className="auth__form-content">
@@ -34,7 +35,7 @@ function Auth(props) {
             maxLength="32"
             value={values.name || ""}
             onChange={handleChange}
-            required
+            required={props.nameRequired}
           />
           <span className={`auth__form-error ${props.isLogin ? 'auth__form-error_type_inactive' : ''}`} id="auth-input-name-error">
             {errors.name || ""}
