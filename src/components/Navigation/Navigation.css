@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-.navigation__menu-button {
+.menu-button {
   display: none;
 }
 
@@ -127,7 +127,7 @@
     transition: width .2s linear;
   }
 
-  .navigation__menu-button {
+  .menu-button {
     display: block;
     margin: 15px 30px 15px 0;
     padding: 0;
@@ -140,7 +140,7 @@
     outline: none;
   }
 
-  .navigation__menu-button:hover {
+  .menu-button:hover {
     cursor: pointer;
     opacity: .7;
   }
@@ -231,7 +231,7 @@
     margin-bottom: 42px;
   }
 
-  .navigation__menu-button {
+  .menu-button {
     width: 22px;
     height: 40px;
     margin: 17px 23px 17px 0;

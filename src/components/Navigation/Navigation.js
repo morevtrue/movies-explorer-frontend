@@ -34,7 +34,7 @@ function Navigation(props) {
 
   return (
     <>
-      <button onClick={openMenu} className="navigation__menu-button"></button>
+      <button onClick={openMenu} className="menu-button"></button>
       <nav className={`navigation ${isOpenMenu ? 'navigation_type_overlay' : ''}`} onMouseDown={handleOverlayClose}>
         <div className={`navigation__menu ${isOpenMenu ? 'navigation__menu_type_active' : ''}`}>
           <button onClick={closeMenu} className={`navigation__menu-close-button ${isOpenMenu ? 'navigation__menu-close-button_type_active' : ''} `}></button>
