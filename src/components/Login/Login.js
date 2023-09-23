@@ -1,19 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Auth from "../Authorization/Auth";
 
-function Login() {
-  const navigate = useNavigate();
-
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    navigate('/movies');
-  }
-
+function Login(props) {
   return (
     <>
       <Auth
-        onSubmit={handleSubmit}
+        onSubmitAuth={props.onSubmit}
         isLogin={true}
         buttonText="Войти"
         text="Ещё не зарегистрированы?"
@@ -21,6 +13,11 @@ function Login() {
         title="Рады видеть!"
         link="/sign-up"
         nameRequired={false}
+        isUnathorized={props.errUnathorized}
+        isUnathorizedText="Неправильные почта или пароль"
+        isBadRequestLogin={props.errBadRequestLogin}
+        isBadRequestLoginText="Переданы некорректные данные при авторизации."
+        isLoading={props.isLoading}
       />
     </>
   )

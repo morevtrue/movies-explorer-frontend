@@ -1,19 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Auth from "../Authorization/Auth";
 
 function Register(props) {
-  const navigate = useNavigate();
-
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    navigate('/sign-in');
-  }
 
   return (
     <>
       <Auth
-        onSubmit={handleSubmit}
+        onSubmitRegister={props.onSubmit}
         isLogin={false}
         buttonText="Зарегистрироваться"
         text="Уже зарегистрированы?"
@@ -21,6 +14,11 @@ function Register(props) {
         title="Добро пожаловать!"
         link="/sign-in"
         nameRequired={true}
+        isBadRequest={props.errBadRequest}
+        isConflict={props.errConflict}
+        isBadRequestText="Переданы некорректные данные при создании пользователя."
+        isConflictText="Такой пользователь уже существует"
+        isLoading={props.isLoading}
       />
     </>
   )

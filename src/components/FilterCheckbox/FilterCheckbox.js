@@ -1,15 +1,7 @@
 import React from "react";
 import './FilterCheckbox.css';
 
-function FilterCheckbox() {
-  const [isCheckedCheckbox, setIsCheckedCheckbox] = React.useState(false);
-  function clickActiveCheckbox() {
-    if (isCheckedCheckbox) {
-      setIsCheckedCheckbox(false);
-    } else {
-      setIsCheckedCheckbox(true);
-    }
-  }
+function FilterCheckbox(props) {
 
   return (
     <form className="filter">
@@ -18,9 +10,9 @@ function FilterCheckbox() {
           type="checkbox"
           className="filter__check-box-input"
           id="checkbox"
-          onClick={clickActiveCheckbox}
+          onClick={props.onClickCheckbox}
         />
-        <span className={`filter__check-box-text ${isCheckedCheckbox ? 'filter__check-box-text_type_active' : ''}`}>Короткометражки</span>
+        <span className={`filter__check-box-text ${props.isCheckbox ? 'filter__check-box-text_type_active' : ''}`}>Короткометражки</span>
       </label>
     </form>
   )

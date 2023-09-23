@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 function Navigation(props) {
   const [isOpenMenu, setIsOpenMenu] = React.useState(false);
 
-  function closeMenu() {
+  const closeMenu = React.useCallback(() => {
     setIsOpenMenu(false);
-  }
+  }, []);
 
   function openMenu() {
     setIsOpenMenu(true);

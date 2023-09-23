@@ -16,6 +16,12 @@
   list-style-type: none;
 }
 
+.movies__card-list-text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
 @media (max-width: 991px) {
   .movies__card-list {
     margin: 79px auto 0;

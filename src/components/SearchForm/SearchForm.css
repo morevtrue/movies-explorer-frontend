@@ -43,6 +43,11 @@
   color: rgba(0, 0, 0, 1);
 }
 
+.search__form-input_type_error::placeholder {
+  color: rgba(238, 52, 101, .7);
+}
+
+
 .search__form-button {
   width: 100%;
   max-width: 100px;

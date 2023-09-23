@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import './Main.css';
 import Header from '../Header/Header';
 import Promo from '../Promo/Promo';
@@ -10,7 +9,6 @@ import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 
 function Main(props) {
-  // const [isOpenMainPage, setIsOpenMainPage] = React.useState(true);
   return (
     <>
       <Header
