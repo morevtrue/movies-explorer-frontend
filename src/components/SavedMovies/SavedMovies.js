@@ -45,8 +45,6 @@ function SavedMovies(props) {
     }
   }, [valueFilter, props.savedCards, props.isCheckbox])
 
-  console.log(filteredCards)
-  console.log(props.savedCards)
   React.useEffect(() => {
     if (filteredCards.length === 0 && props.savedCards.length !== 0) {
       setIsNotFound(true);
@@ -81,6 +79,7 @@ function SavedMovies(props) {
                 link={card.image}
                 savedCards={props.savedCards}
                 handleAddMovies={props.handleAddMovies}
+                isSave={true}
               />
             ))}
         </MoviesCardList>

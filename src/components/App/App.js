@@ -18,6 +18,7 @@ function App() {
   const [cards, setCards] = React.useState(JSON.parse(localStorage.getItem('cards')));
   const [savedCards, setSavedCards] = React.useState([]);
   const [isLoggedIn, setIsLoggedIn] = React.useState(true);
+  const [authBlocked, setAuthBlocked] = React.useState(false);
   const [value, setValue] = React.useState('');
   const [isValidSubmit, setIsValidSubmit] = React.useState(false);
   const [isValueError, setIsValueError] = React.useState('Фильм');
@@ -49,6 +50,7 @@ function App() {
       .then((res) => {
         if (res) {
           setIsLoggedIn(true);
+          setAuthBlocked(true);
         } else {
           setIsLoggedIn(false);
           navigate("/", { replace: true });
@@ -162,7 +164,6 @@ function App() {
   }, [valueFilter, filteredCards, cards]);
 
   // ДОБАВИТЬ КАРТОЧКУ В СОХРАНЕННЫЕ
-  console.log(cards)
   function handleAddMovies(card) {
     mainApi
       .addNewCard(card)
@@ -178,7 +179,6 @@ function App() {
     const savedMovie = savedCards.find(savedCard => {
       return savedCard.owner === currentUser._id ? (savedCard.movieId === card.movieId) || (savedCard.movieId === card.id) : savedCard
     })
-    console.log(savedMovie)
     mainApi
       .deleteCard(savedMovie._id)
       .then(() => {
@@ -198,6 +198,7 @@ function App() {
         if (res) {
           setErrBadRequest(false);
           setErrConflict(false);
+          handleSubmitAuth(password, email);
         }
       })
       .catch((err) => {
@@ -277,6 +278,7 @@ function App() {
         setIsCheckedCheckbox(JSON.parse(localStorage.getItem('checkbox')));
         setIsSaveCheckedCheckbox(JSON.parse(localStorage.getItem('checkbox')));
         setIsLogout(true);
+        setAuthBlocked(false);
       })
       .catch((err) => {
         console.log(err);
@@ -287,7 +289,7 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className="app">
         <Routes>
-          <Route
+          {!authBlocked && <Route
             path="/sign-up"
             element={
               <Register
@@ -297,8 +299,8 @@ function App() {
                 isLoading={isLoading}
               />
             }
-          />
-          <Route
+          />}
+          {!authBlocked && <Route
             path="/sign-in"
             element={
               <Login
@@ -307,8 +309,9 @@ function App() {
                 errBadRequestLogin={errBadRequestProfile}
                 isLoading={isLoading}
               />
+
             }
-          />
+          />}
           <Route
             path="/"
             element={

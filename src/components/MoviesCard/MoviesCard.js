@@ -8,8 +8,6 @@ function MoviesCard(props) {
   React.useEffect(() => {
     const movie = props.savedCards.find((card) => card.movieId === props.card.id);
     const saveMovie = props.savedCards.find((card) => card.movieId === props.card.movieId);
-    console.log(saveMovie)
-    console.log(movie)
     if (movie || saveMovie) {
       setIsSaveMovie(true);
     } else {

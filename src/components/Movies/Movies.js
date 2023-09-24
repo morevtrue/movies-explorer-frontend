@@ -24,6 +24,12 @@ function Movies(props) {
 
   const handleChangeScreenWidth = React.useEffect(() => {
 
+    if (next === 0) {
+      setNumVisDesktop(11);
+      setNumVisTab(7);
+      setNumVisMob(4);
+    }
+
     if (isScreenLg && next !== null && visibleCards > 10) {
       setNumVisTab(numVisDesktop);
       setNumVisMob(numVisDesktop);
@@ -102,6 +108,7 @@ function Movies(props) {
           setCards={props.setCards}
           setNext={setNext}
           movies={true}
+          setVisibleCards={setVisibleCards}
         />
 
         <MoviesCardList>
