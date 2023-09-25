@@ -21,20 +21,6 @@ function Movies(props) {
   const [numVisTab, setNumVisTab] = React.useState(JSON.parse(localStorage.getItem('visible-cards-tab')));
   const [numVisMob, setNumVisMob] = React.useState(JSON.parse(localStorage.getItem('visible-cards-mobile')));
 
-
-  // React.useEffect(() => {
-  //   if (next === 0) {
-  //     setNumVisDesktop(11);
-  //     setNumVisTab(7);
-  //     setNumVisMob(4);
-  //   }
-  //   // else {
-  //   //   setNumVisDesktop(visibleCards + next);
-  //   //   setNumVisTab(visibleCards + next);
-  //   //   setNumVisMob(visibleCards + next);
-  //   // }
-  // }, [next]);
-
   const handleChangeScreenWidth = React.useEffect(() => {
 
     if (next === 0) {
@@ -53,7 +39,7 @@ function Movies(props) {
       localStorage.setItem('visible-cards-tab', JSON.stringify(numVisTab));
     }
 
-    if (isScreenMd && !isScreenSm && next !== null && next > 0 && visibleCards > 8) {
+    if (isScreenMd && !isScreenSm && next !== null && visibleCards > 8) {
       setNumVisDesktop(numVisTab);
       setNumVisMob(numVisTab);
       localStorage.setItem('visible-cards-mobile', JSON.stringify(numVisMob));
