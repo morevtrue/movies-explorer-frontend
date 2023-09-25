@@ -17,10 +17,23 @@ function Movies(props) {
   const [isMobile, setIsMobile] = React.useState(false);
   const [visibleCards, setVisibleCards] = React.useState(JSON.parse(localStorage.getItem('visible-cards')));
   const { isScreenLg, isScreenMd, isScreenSm } = useResize();
-  const [numVisDesktop, setNumVisDesktop] = React.useState(11);
-  const [numVisTab, setNumVisTab] = React.useState(7);
-  const [numVisMob, setNumVisMob] = React.useState(4);
+  const [numVisDesktop, setNumVisDesktop] = React.useState(JSON.parse(localStorage.getItem('visible-cards-desktop')));
+  const [numVisTab, setNumVisTab] = React.useState(JSON.parse(localStorage.getItem('visible-cards-tab')));
+  const [numVisMob, setNumVisMob] = React.useState(JSON.parse(localStorage.getItem('visible-cards-mobile')));
 
+
+  // React.useEffect(() => {
+  //   if (next === 0) {
+  //     setNumVisDesktop(11);
+  //     setNumVisTab(7);
+  //     setNumVisMob(4);
+  //   }
+  //   // else {
+  //   //   setNumVisDesktop(visibleCards + next);
+  //   //   setNumVisTab(visibleCards + next);
+  //   //   setNumVisMob(visibleCards + next);
+  //   // }
+  // }, [next]);
 
   const handleChangeScreenWidth = React.useEffect(() => {
 
@@ -28,21 +41,30 @@ function Movies(props) {
       setNumVisDesktop(11);
       setNumVisTab(7);
       setNumVisMob(4);
+      localStorage.setItem('visible-cards-desktop', JSON.stringify(numVisDesktop));
+      localStorage.setItem('visible-cards-mobile', JSON.stringify(numVisMob));
+      localStorage.setItem('visible-cards-tab', JSON.stringify(numVisTab));
     }
 
     if (isScreenLg && next !== null && visibleCards > 10) {
       setNumVisTab(numVisDesktop);
       setNumVisMob(numVisDesktop);
+      localStorage.setItem('visible-cards-mobile', JSON.stringify(numVisMob));
+      localStorage.setItem('visible-cards-tab', JSON.stringify(numVisTab));
     }
 
-    if (isScreenMd && !isScreenSm && next !== null && visibleCards > 8) {
+    if (isScreenMd && !isScreenSm && next !== null && next > 0 && visibleCards > 8) {
       setNumVisDesktop(numVisTab);
       setNumVisMob(numVisTab);
+      localStorage.setItem('visible-cards-mobile', JSON.stringify(numVisMob));
+      localStorage.setItem('visible-cards-desktop', JSON.stringify(numVisDesktop));
     }
 
     if (isScreenSm && next !== null && visibleCards > 5) {
       setNumVisTab(numVisMob);
       setNumVisDesktop(numVisMob);
+      localStorage.setItem('visible-cards-desktop', JSON.stringify(numVisDesktop));
+      localStorage.setItem('visible-cards-tab', JSON.stringify(numVisTab));
     }
 
     if (isScreenLg) {
@@ -87,6 +109,9 @@ function Movies(props) {
     if (props.isLogout) {
       localStorage.removeItem('next');
       localStorage.removeItem('visible-cards');
+      localStorage.removeItem('visible-cards-desktop');
+      localStorage.removeItem('visible-cards-tab');
+      localStorage.removeItem('visible-cards-mob');
     }
     localStorage.setItem('next', JSON.stringify(next));
     localStorage.setItem('visible-cards', JSON.stringify(visibleCards));
