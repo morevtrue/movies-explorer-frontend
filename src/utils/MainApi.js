@@ -126,5 +126,5 @@ export const mainApi = new MainApi({
   baseUrl: 'https://api.moviesmorev.students.nomoredomainsicu.ru',
   headers: {
     'Content-Type': 'application/json'
-  },
+  }
 });

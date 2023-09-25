@@ -129,6 +129,7 @@ function Movies(props) {
                       link={`https://api.nomoreparties.co/${card.image.url}`}
                       savedCards={props.savedCards}
                       visibleCards={visibleCards}
+                      movies={true}
                     />
                   ))
           }

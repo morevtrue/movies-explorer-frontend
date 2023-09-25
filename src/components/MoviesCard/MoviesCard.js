@@ -47,7 +47,7 @@ function MoviesCard(props) {
 
       <button className={
         `movies__card-button-save 
-        ${isSaveMovie ? 'movies__card-button-save_type_active'
+        ${isSaveMovie && props.movies ? 'movies__card-button-save_type_active'
           : ''}
         ${props.isSave ? 'movies__card-button-save_type_delete' : ''}`
       } onClick={clickSaveButton}>{
