@@ -1,12 +1,16 @@
 .show-more {
+  display: none;
   padding: 0;
   margin: 60px auto 84px;
   width: 100%;
   max-width: 1280px;
 }
 
-.show-more__button {
+.show-more_type_active {
   display: block;
+}
+
+.show-more__button {
   width: calc(100% - 140px);
   max-width: 1140px;
   margin: 0 70px;
@@ -37,6 +41,9 @@
     max-width: 708px;
     width: calc(100% - 60px);
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

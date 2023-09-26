@@ -106,7 +106,7 @@
 }
 
 .auth__submit-button {
-  margin: 32px 0 16px;
+  margin: 0 0 16px;
   padding: 0;
   border: none;
   font-weight: 500;
@@ -135,6 +135,20 @@
 .auth__submit-button_type_inactive:hover {
   cursor: default;
   opacity: 1;
+}
+
+.auth__error-text {
+  visibility: hidden;
+  margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.31px;
+  text-align: center;
+  color: rgba(255, 0, 76, 1);
+}
+
+.auth__error-text_type_active {
+  visibility: visible;
 }
 
 .auth__place-login {

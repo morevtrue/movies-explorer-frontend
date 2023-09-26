@@ -14,9 +14,13 @@
 
 https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1?type=design&node-id=1-9662&mode=design&t=99NLoJbp1To56VKg-0
 
-## Ссылка на демо сайта
+## Ссылка на сайт
 
-https://morevtrue.github.io/movies-explorer-frontend/
+https://movies-morevtrue.students.nomoredomainsicu.ru
+
+## Ссылка на пул реквест
+
+https://github.com/morevtrue/movies-explorer-frontend/pull/2
 
 ## Используемый стек технологий 
 <div>
